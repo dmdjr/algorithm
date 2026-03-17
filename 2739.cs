@@ -12,3 +12,9 @@
 // ...
 // 2 * 9 = 18
 
+int n = int.Parse(Console.ReadLine());
+
+for (int i = 0; i < 9; i++)
+{
+    Console.WriteLine($"{n} * {i + 1} = {n * (i + 1)}");
+}
