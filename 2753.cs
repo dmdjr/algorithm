@@ -12,4 +12,24 @@
 // 예제 입력: 2000
 // 예제 출력: 1
 
+int year = int.Parse(Console.ReadLine());
 
+bool isYoon = false;
+
+if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+{
+    isYoon = true;
+}
+else
+{
+    isYoon = false;
+}
+
+if (isYoon)
+{
+    Console.WriteLine("1");
+}
+else
+{
+    Console.WriteLine("0");
+}
