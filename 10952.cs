@@ -21,3 +21,21 @@
 // 17
 // 7
 
+int[] sum = new int[100];
+int i = 0;
+while (true)
+{
+    string[] input = Console.ReadLine().Split(' ');
+    int a = int.Parse(input[0]);
+    int b = int.Parse(input[1]);
+    if (a == 0 && b == 0)
+    {
+        break;
+    }
+    sum[i] = a + b;
+    i++;
+}
+for (int j = 0; j < i; j++)
+{
+    Console.WriteLine(sum[j]);
+}
