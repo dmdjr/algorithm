@@ -23,3 +23,13 @@
 // 힌트: Console.WriteLine을 매번 호출하면 시간초과!
 // StringBuilder 또는 StreamWriter를 사용해보세요.
 
+var writer = new StreamWriter(Console.OpenStandardOutput());
+int n = int.Parse(Console.ReadLine());
+for (int i = 0; i < n; i++)
+{
+    string[] input = Console.ReadLine().Split(' ');
+    int a = int.Parse(input[0]);
+    int b = int.Parse(input[1]);
+    writer.WriteLine($"{a + b}");
+}
+writer.Flush();
