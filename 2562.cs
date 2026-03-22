@@ -20,3 +20,23 @@
 // 85
 // 8
 
+int[] arr = new int[9];
+int max = 0;
+int maxIndex = 0;
+for (int i = 0; i < 9; i++)
+{
+    int a = int.Parse(Console.ReadLine());
+    arr[i] = a;
+}
+
+for (int i = 0; i < 9; i++)
+{
+    if (max < arr[i])
+    {
+        max = arr[i];
+        maxIndex = i + 1;
+    }
+}
+
+Console.WriteLine(max);
+Console.WriteLine(maxIndex);
