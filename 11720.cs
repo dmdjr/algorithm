@@ -14,3 +14,11 @@
 //
 // 예제 출력: 46
 
+int n = int.Parse(Console.ReadLine());
+int sum = 0;
+string input = Console.ReadLine();
+for (int i = 0; i < n; i++)
+{
+    sum += input[i] - '0';
+}
+Console.WriteLine(sum);

@@ -19,19 +19,17 @@
 //
 // 예제 출력: 10
 
-int[] arr1 = new int[10];
-int[] arr2 = new int[42];
+int[] arr = new int[42];
 int count = 0;
 for (int i = 0; i < 10; i++)
 {
     int a = int.Parse(Console.ReadLine());
-    arr1[i] = a % 42;
-    arr2[arr1[i]] = 1;
+    arr[a % 42] = 1;
 }
 
 for (int i = 0; i < 42; i++)
 {
-    if (arr2[i] == 1)
+    if (arr[i] == 1)
     {
         count++;
     }
