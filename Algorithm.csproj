@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <Compile Remove="**/*.cs" />
-    <Compile Include="$(File).cs" />
+    <Compile Include="**/$(File).cs" />
   </ItemGroup>
 
 </Project>
