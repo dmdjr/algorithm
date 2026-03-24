@@ -9,6 +9,45 @@
 // 예제 입력: Mississipi
 // 예제 출력: ?
 //
-// 설명: i=4번, s=3번, p=1번, M=1번 → i와 s? 아니, i가 4번으로 최다지만
-//        실제로 i=4, s=3이므로... 직접 세어보세요!
 
+string input = Console.ReadLine();
+input = input.ToUpper();
+int[] arr = new int[26];
+int max = 0;
+int maxIndex = 0;
+int count = 0;
+string result;
+bool isOnly = true;
+for (int i = 0; i < input.Length; i++)
+{
+    arr[input[i] - 'A'] += 1;
+}
+for (int i = 0; i < 26; i++)
+{
+    if (max < arr[i])
+    {
+        max = arr[i];
+        maxIndex = i;
+    }
+}
+result = "" + (char)('A' + maxIndex);
+for (int i = 0; i < 26; i++)
+{
+    if (arr[i] == max)
+    {
+        count++;
+    }
+    if (count > 1)
+    {
+        isOnly = false;
+    }
+}
+
+if (isOnly)
+{
+    Console.WriteLine(result);
+}
+else
+{
+    Console.WriteLine("?");
+}
